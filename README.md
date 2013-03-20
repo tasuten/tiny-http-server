@@ -12,7 +12,7 @@ tiny-http-server
 ========
     $ make
     $ java HttpServer port # portはオプション。デフォルトは8080
-終了はCTRL-Cで
+終了はCTRL-Cで。簡易なマニュアルがmanual.txtに付いています。
 
 謝辞
 ====
