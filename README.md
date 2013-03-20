@@ -3,6 +3,12 @@ tiny-http-server
 
 このレポジトリは、私が所属する大学のクラブ([C.A.C.](http://ksu-cac.com/ "C.A.C. Web site"))のイベントとして開催された制作合宿(2013/03/19-2013/03/20)で私が作成した作品です。
 
+合宿終了時のコードにドキュメントとサンプルページを追加したリビジョンは以下になります。
+
+[tasuten/tiny-http-server at 9207fd5fd4d28a7e2442a4107be7928d7c5be0d3 · GitHub](https://github.com/tasuten/tiny-http-server/tree/9207fd5fd4d28a7e2442a4107be7928d7c5be0d3 "tasuten/tiny-http-server at 9207fd5fd4d28a7e2442a4107be7928d7c5be0d3 · GitHub")
+
+HEADのコードは気まぐれで修正が加わったりしています。
+
 内容としては、極々簡素なHTTPサーバをJavaで書いてみたものとなっています。
 
 せっかくなのでgithubで公開しています。
