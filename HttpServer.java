@@ -39,7 +39,10 @@ class HttpServer{
         } else {
             port = Integer.parseInt(args[0]);
         }
+        /* そのポートを開く権限が無い場合(例:一般ユーザで80を指定)
+         * BintdException(Permission Denined)で終了される */
         HttpServer server = new HttpServer(port);
         server.listen();
     }
 }
+
