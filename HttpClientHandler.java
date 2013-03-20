@@ -2,6 +2,7 @@ import java.io.*;
 import java.net.*;
 
 class HttpClientHandler extends Thread{
+    /* フィールド扱いのためこれらの変数はnullで初期化される */
     private Socket socket;
     private BufferedReader inString; /* クライアントからの文字列受け取りに用いる */
     private BufferedWriter outString; /* クライアントへの文字列送信に用いる */
