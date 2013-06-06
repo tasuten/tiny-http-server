@@ -189,7 +189,7 @@ class HttpClientHandler extends Thread{
         send("<html><head><title>" + statusCode + "</title></head>");
         send("<body><h1>" + statusCode + "</h1>");
         send("<p>" + bodyMessage + "</p>");
-        send("</html>");
+        send("</body></html>");
     }
 
 
