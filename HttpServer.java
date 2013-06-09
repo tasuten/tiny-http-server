@@ -2,7 +2,6 @@ import java.net.*;
 import java.io.*;
 
 class HttpServer{
-    private ServerSocket server;
     private int port;
 
     /* コンストラクタ
@@ -12,6 +11,7 @@ class HttpServer{
     }
 
     private void listen(){
+        ServerSocket server = null;
         Socket socket = null;
         HttpClientHandler handler = null;
         try{
