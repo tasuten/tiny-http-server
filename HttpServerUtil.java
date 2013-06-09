@@ -52,7 +52,7 @@ class HttpServerUtil {
         String suffix = getSuffix(f.getName());
         if (suffix == null) {
             return false; // テキストではない
-        } else if(suffix == "") {
+        } else if(suffix.isEmpty()) {
             return true; // 取り敢えずテキストにしておく
             /* 理由は、ここに来るのは
              * 1. .bashrcのように先頭にのみ.が付く
