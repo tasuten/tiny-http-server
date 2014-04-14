@@ -61,7 +61,7 @@ class HttpClientHandler extends Thread{
              * 本来ならば、各リソースそれぞれに対して可能なメソッドを返すべきだが、
              * ここではGETとHEADとOPTIONSしか実装してないのでどんなリソース相手でも同じ結果を返すようにしている */
             if (method.equals("OPTIONS")) {
-                send("HTTP/1.1 200 OK");
+                send("HTTP/1.0 200 OK");
                 System.out.println("200 OK");
                 send("Allow: " + IMPLEMENTED_METHOD[0] + ", "+ IMPLEMENTED_METHOD[1]);
             } else { /* OPTIONS以外のメソッド */
@@ -81,7 +81,7 @@ class HttpClientHandler extends Thread{
                 }
 
                 /* ここまで来たということは正常なリクエスト */
-                send("HTTP/1.1 200 OK");
+                send("HTTP/1.0 200 OK");
                 System.out.println("200 OK");
                 String mimeType = HttpServerUtil.getMIMEType(targetFile);
                 /* MIME Typeがtext/***な場合、RFC2616で既定のエンコーディングが
@@ -183,7 +183,7 @@ class HttpClientHandler extends Thread{
     /* 引数例:statusCode..."404 Not Found" bodyMessage..."This file does not exist."
      * statusCodeはステータスコード、bodyMessageはHTMLで表示させるメッセージ */
     private void errorResponse(String statusCode, String bodyMessage) throws IOException {
-        send("HTTP/1.1 " + statusCode);
+        send("HTTP/1.0 " + statusCode);
         send("Content-Type: text/html; charset=utf-8");
         send("");
         send("<html><head><title>" + statusCode + "</title></head>");
